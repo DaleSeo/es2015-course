@@ -1,5 +1,14 @@
+function findUsers(userIds) {
+  for (var i in userIds) {
+    findUser(userIds[i], function (user) {
+      console.log('A user found at index', i)
+      console.log(user)
+    })
+  }
+}
+
 function findUser(id, cb) {
-  setTimeout(function() {
+  setTimeout(function () {
     var fakeUser = {
       id: id,
       name: 'Joe#' + id,
@@ -7,15 +16,6 @@ function findUser(id, cb) {
     }
     cb(fakeUser)
   } ,1000)
-}
-
-function findUsers(userIds) {
-  for (var i in userIds) {
-    findUser(userIds[i], function (user) {
-      console.log('Found for id,', userIds[i])
-      console.log('=> A user founded:', user)
-    })
-  }
 }
 
 findUsers([3, 7, 29, 105])

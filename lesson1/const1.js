@@ -1,12 +1,16 @@
 function loadProfiles(users) {
   if (users.length > 3) {
-      var loadingMessage = "Loading..."
+      let loadingMessage = "Loading..."
       console.log('=>', loadingMessage)
   } else {
-      var flashMessage = "Done!"
+      let flashMessage = "Done!"
       console.log('=>', flashMessage)
   }
   console.log('after else block:', flashMessage)
+
+  if (someValue > 3) {
+    // ...
+  }
 }
 
 // var users = ['Dale', 'Ben', 'Nate']
